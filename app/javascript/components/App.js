@@ -1,25 +1,17 @@
 import React, { Component } from 'react'
-import PropTypes from "prop-types"
+import Header from "./components/Header";
+import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-class App extends React.Component {
 
+class App extends React.Component {
   render() {
-    const {
-      logged_in,
-      current_user,
-      new_user_route,
-      sign_in_route,
-      sign_out_route
-    } = this.props
-    console.log("logged_in:", logged_in)
-    console.log("current_user:", current_user)
-    console.log("new_user_route:", new_user_route)
-    console.log("sign_in_route:", sign_in_route)
-    console.log("sign_out_route:", sign_out_route)
     return (
-      <>
-        <h1>Apartment App</h1>
-      </>
+      <Router>
+        <Header />
+        <Switch>
+          <Home exact path="/" component={Home} />
+        </Switch>
+      </Router>
     )
   }
 }
