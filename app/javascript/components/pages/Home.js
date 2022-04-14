@@ -4,10 +4,12 @@ class Home extends Component {
     render() {
         return (
             <div className="home">
-                <h2>Home page for apartment app</h2>
-                <p>Find something that you LOVE!</p>
+                <h4>Find yourself an Apartment</h4>
+                <br></br>
+                <p>more information about finding an apartment.</p>
             </div>
         )
     }
 }
+
 export default Home
